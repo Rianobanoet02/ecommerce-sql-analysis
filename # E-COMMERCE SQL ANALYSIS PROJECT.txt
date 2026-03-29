@@ -1,0 +1,102 @@
+# E-COMMERCE SQL ANALYSIS PROJECT
+
+## 1. OBJECTIVE
+Menganalisis performa penjualan dan perilaku customer untuk memahami pola bisnis dan sumber utama revenue.
+
+---
+
+## 2. SCOPE (BATASAN MASALAH)
+
+Fokus:
+- Revenue (pendapatan)
+- Customer behavior
+- Product value
+- Transaction pattern
+
+Tidak dibahas:
+- Machine learning
+- Prediksi
+- Geolocation
+- Optimasi operasional
+
+---
+
+## 3. CORE QUESTIONS
+
+### [1] SALES PERFORMANCE
+- Berapa total revenue?
+- Berapa total order?
+- Berapa average order value?
+
+### [2] PRODUCT & ORDER PATTERN
+- Berapa jumlah item per order?
+- Apakah customer beli banyak atau sedikit?
+- Apakah nilai tinggi karena harga atau jumlah?
+
+### [3] CUSTOMER BEHAVIOR
+- Apakah customer repeat?
+- Siapa top customer?
+- Bagaimana distribusi pembelian?
+
+### [4] CUSTOMER SEGMENTATION
+- Bagaimana pembagian Low / Medium / High?
+- Siapa penyumbang revenue terbesar?
+
+---
+
+## 4. CURRENT FINDINGS
+
+### Sales Overview
+- Total revenue ≈ 16M, menunjukkan skala bisnis cukup besar
+- Total orders ≈ 99k, menunjukkan volume transaksi tinggi
+- Jumlah customer ≈ 99k, hampir sama dengan jumlah order
+
+**Interpretasi:**  
+Jumlah order yang hampir sama dengan jumlah customer mengindikasikan bahwa sebagian besar customer kemungkinan hanya melakukan satu transaksi.
+
+### Product & Order Pattern
+- Mayoritas order terdiri dari 1–2 item
+- Order besar (>5 item) sangat jarang
+- Harga produk sangat bervariasi (0.85 – 6735)
+- Rata-rata harga produk ≈ 120, menunjukkan mayoritas produk low–mid value
+
+**Interpretasi:**  
+Sebagian besar transaksi bernilai kecil dan didominasi pembelian sedikit item. Namun, terdapat beberapa produk bernilai tinggi yang dapat meningkatkan nilai transaksi.
+
+### Customer Behavior
+- Seluruh customer dalam dataset hanya melakukan satu transaksi
+- Tidak ditemukan repeat customer
+
+**Interpretasi:**  
+Bisnis sangat bergantung pada customer baru dan tidak menunjukkan customer retention. Namun, hasil ini masih perlu dikaji lebih lanjut untuk memastikan apakah disebabkan oleh karakter bisnis atau struktur dataset.
+
+### Customer Segmentation
+- Medium customer = kontributor revenue terbesar
+- High customer sedikit tetapi memberikan dampak revenue yang signifikan
+
+**Interpretasi:**  
+Bisnis tampaknya ditopang oleh customer medium sebagai sumber revenue utama, sementara customer high-value berperan sebagai penguat kontribusi revenue.
+
+---
+
+## 5. NEXT STEP
+
+[x] Validasi repeat customer
+[ ] Analisis revenue per bulan
+[ ] Analisis kontribusi revenue per order
+[ ] Refine final insight & conclusion
+
+---
+
+## 6. WORK RULE
+- Kerjakan 1 query saja per sesi
+- Tulis 1 insight setiap selesai
+- Jangan lompat topik
+- Jangan langsung menyimpulkan tanpa validasi
+
+---
+
+## 7. REFLECTION
+- Apakah saya memahami data atau hanya menjalankan query?
+- Apakah insight saya didukung data?
+- Apakah saya terburu-buru menyimpulkan?
