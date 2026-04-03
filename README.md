@@ -3,6 +3,8 @@
 ## 1. Objective
 Menganalisis performa penjualan dan perilaku customer untuk memahami pola bisnis dan sumber utama revenue.
 
+---
+
 ## 2. Scope
 Fokus analisis:
 - Revenue
@@ -13,8 +15,10 @@ Fokus analisis:
 Di luar scope:
 - Machine learning
 - Forecasting
-- Geolocation analysis
+- Geolocation
 - Operational optimization
+
+---
 
 ## 3. Key Questions
 1. Berapa total revenue, order, dan customer?
@@ -23,6 +27,8 @@ Di luar scope:
 4. Segmen customer mana yang paling berkontribusi pada revenue?
 5. Apakah revenue bertumbuh karena jumlah order atau nilai order?
 
+---
+
 ## 4. Main Findings
 
 ### Sales Overview
@@ -30,8 +36,10 @@ Di luar scope:
 - Total orders ≈ 99k
 - Total customers ≈ 99k
 
-Interpretasi:
+**Interpretasi:**  
 Jumlah order yang hampir sama dengan jumlah customer mengindikasikan sebagian besar customer hanya melakukan satu transaksi.
+
+---
 
 ### Product & Order Pattern
 - Mayoritas order terdiri dari 1–2 item
@@ -39,56 +47,84 @@ Jumlah order yang hampir sama dengan jumlah customer mengindikasikan sebagian be
 - Harga produk bervariasi dari 0.85 sampai 6735
 - Average product price ≈ 120
 
-Interpretasi:
+**Interpretasi:**  
 Sebagian besar transaksi berada pada kategori low–mid value, meskipun terdapat beberapa produk dengan harga tinggi.
+
+---
 
 ### Customer Behavior
 - Seluruh customer hanya melakukan satu transaksi
 - Tidak ditemukan repeat customer
 
-Interpretasi:
+**Interpretasi:**  
 Bisnis sangat bergantung pada customer baru dan tidak menunjukkan customer retention. Namun, hasil ini tetap perlu dipahami dalam konteks struktur dataset.
+
+---
 
 ### Customer Segmentation
 - Segmen Medium menjadi kontributor revenue terbesar
 - Segmen High jumlahnya kecil tetapi berdampak signifikan
 
-Interpretasi:
+**Interpretasi:**  
 Revenue utama ditopang oleh customer medium, sementara customer high-value berperan sebagai penguat kontribusi revenue.
 
-### Revenue Trend
+---
+
+### Revenue Trend (Monthly)
 - Revenue pada awal periode sangat rendah
-- Revenue kemudian meningkat dan relatif stabil pada bulan-bulan berikutnya
-- Mayoritas revenue bulanan berada di kisaran sekitar 100 ribu
+- Revenue kemudian meningkat dan relatif stabil
+- Mayoritas revenue bulanan berada di kisaran ~100k
 
-Interpretasi:
-Bisnis menunjukkan fase awal aktivitas rendah, lalu berkembang dan memasuki periode yang lebih stabil.
+**Interpretasi:**  
+Bisnis menunjukkan fase awal aktivitas rendah, lalu berkembang dan memasuki periode stabil.
 
-### Order Trend
-- Mayoritas jumlah order per bulan berada di kisaran sekitar 2000
+---
+
+### Order Trend (Monthly)
+- Mayoritas jumlah order per bulan berada di kisaran ~2000
 - Beberapa bulan memiliki jumlah order sangat rendah (<10)
 - Pola revenue bergerak sejalan dengan jumlah order
 
-Interpretasi:
-Pertumbuhan revenue lebih dipengaruhi oleh volume transaksi dibanding kenaikan nilai transaksi per order.
+**Interpretasi:**  
+Revenue lebih dipengaruhi oleh volume transaksi dibanding nilai transaksi per order.
+
+---
 
 ### Average Order Value
 - Average order value ≈ 160
 
-Interpretasi:
-Nilai transaksi per order relatif tidak tinggi, sehingga revenue bisnis lebih banyak didorong oleh banyaknya transaksi.
+**Interpretasi:**  
+Nilai transaksi per order relatif stabil dan tidak tinggi, sehingga pertumbuhan revenue lebih didorong oleh jumlah transaksi.
+
+---
 
 ## 5. Final Conclusion
-Bisnis menunjukkan pola volume-driven, di mana pertumbuhan revenue terutama didorong oleh peningkatan jumlah transaksi, bukan peningkatan nilai transaksi per customer.
+Bisnis e-commerce ini menunjukkan pola **volume-driven growth**, di mana peningkatan revenue terutama dipengaruhi oleh jumlah transaksi, bukan nilai transaksi per customer.
 
-Selain itu, tidak adanya repeat customer menunjukkan kelemahan pada customer retention, yang dapat menjadi area evaluasi di masa depan.
+Selain itu, tidak adanya repeat customer menunjukkan kelemahan pada customer retention, yang berpotensi menjadi risiko jangka panjang bagi keberlanjutan bisnis.
 
-## 6. Business Implication
-- Pertumbuhan revenue sangat bergantung pada volume transaksi
-- Customer retention perlu menjadi perhatian utama
-- Customer medium perlu dipertahankan karena menjadi sumber revenue utama
-- Customer high-value juga penting karena kontribusinya besar meskipun jumlahnya sedikit
+---
 
-## 7. Files
-- `analysis.sql` → query SQL utama
-- `README.md` → dokumentasi project
+## 6. Business Recommendation
+Berdasarkan hasil analisis, beberapa rekomendasi strategis:
+
+- Meningkatkan **customer retention**, karena saat ini seluruh customer hanya melakukan satu transaksi
+- Mengembangkan strategi **loyalty program** atau promosi untuk mendorong repeat purchase
+- Mempertahankan dan mengoptimalkan **customer medium**, karena merupakan kontributor utama revenue
+- Mengidentifikasi karakteristik **high-value customer** untuk meningkatkan kontribusi mereka
+- Fokus pada peningkatan volume transaksi melalui marketing, karena revenue sangat bergantung pada jumlah order
+
+---
+
+## 7. Tools & Skills
+- SQL (MySQL)
+- Data Aggregation
+- Data Cleaning
+- Business Insight Analysis
+
+---
+
+## 8. Project Structure
+- `analysis.sql` → Query SQL utama
+- `README.md` → Dokumentasi project
+- `Data/` → Dataset (jika tersedia)
