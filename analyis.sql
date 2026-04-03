@@ -59,7 +59,7 @@ from (
 -- ==============================
 -- 4. REVENUE TREND (MONTHLY)
 -- ==============================
-select date_format(o.order_purchase_timestamp,'%y-%m') as order_month,
+select date_format(o.order_purchase_timestamp,'%Y-%m') as order_month,
 		sum(p.payment_value) as total_revenue
         from orders o
         join order_payments p
@@ -73,6 +73,7 @@ select date_format(o.order_purchase_timestamp,'%y-%m') as order_month,
 -- Hal ini menunjukkan adanya fase awal dengan aktivitas rendah,
 -- diikuti oleh periode pertumbuhan dan stabilisasi
 
+-- ==============================
 -- 5. ORDER TREND (MONTHLY)
 -- ==============================
 SELECT 
